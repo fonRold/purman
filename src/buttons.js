@@ -26,7 +26,7 @@ export function ButtonsReport(props){
       <input type="number" value={props.date} onChange={props.SetDate} />
       <input type="text" value={props.cur} onChange={props.SetCur} />
       <input type="submit" value='Report' onClick={props.ReportPurchase} />
-      <div>Sum: {props.report} {props.cur}</div>
+      <div id="reportSum">Sum: {props.report} {props.cur}</div>
     </div>
   );
 }

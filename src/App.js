@@ -75,7 +75,7 @@ export default class App extends React.Component{
   render(){
     if(this.state.showing==='start')
       return(
-        <div>     
+        <div id="main-panel">     
           <form onSubmit={this.handleSubmit}>           
             <Buttons StateAdd={this.StateAdd} StateReport={this.StateReport} StateDelete={this.StateDelete} />
           </form>
@@ -85,9 +85,9 @@ export default class App extends React.Component{
     else
       if(this.state.showing === "report")
       return(
-        <div>     
-          <form onSubmit={this.handleSubmit}>           
-                <Buttons StateAdd={this.StateAdd} StateReport={this.StateReport} StateDelete={this.StateDelete} /> 
+        <div id="main-panel">     
+        
+          <form onSubmit={this.handleSubmit}>            
                 <ButtonsReport date={this.state.date} SetDate={this.SetDate} cur={this.state.cur} SetCur={this.SetCur} report={this.state.report} ReportPurchase={this.ReportPurchase} />
           </form>
           <ul>{this.state.arr}</ul>
@@ -96,7 +96,7 @@ export default class App extends React.Component{
     else
     if(this.state.showing === "add")
       return(
-        <div>     
+        <div id="main-panel">     
           <form onSubmit={this.handleSubmit}>           
                 <Buttons StateAdd={this.StateAdd} StateReport={this.StateReport} StateDelete={this.StateDelete} />
                 <ButtonsAdd fullDate={this.state.fullDate} item={this.state.item} cur={this.state.cur} price={this.state.price} SetFulldate={this.SetFulldate} SetCur={this.SetCur} SetPrice={this.SetPrice} addPurchase={this.AddPurchase} SetValue={this.SetValue} />
@@ -107,7 +107,7 @@ export default class App extends React.Component{
     else
     if(this.state.showing === "delete")
       return(
-        <div>     
+        <div id="main-panel">     
           <form onSubmit={this.handleSubmit}>           
               <Buttons StateAdd={this.StateAdd} StateReport={this.StateReport} StateDelete={this.StateDelete} />
               <ButtonsDelete fullDate={this.state.fullDate} SetFulldate={this.SetFulldate} DeletePurchase={this.DeletePurchase} />
